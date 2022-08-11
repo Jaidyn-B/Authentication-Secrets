@@ -13,10 +13,10 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
 const config = {
-    server: "localhost",
-    user: "sa",
-    password: "legends$7",
-    database: "user",
+    server: process.env.SERVER,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
     port: 1433,
     options: {
         trustServerCertificate: true
